@@ -49,6 +49,7 @@ video-zoom=0
 
 --]]
 
+local f = require '../auto-profiles-functions'
 local utils = require 'mp.utils'
 local msg = require 'mp.msg'
 
