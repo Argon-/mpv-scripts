@@ -49,7 +49,12 @@ video-zoom=0
 
 --]]
 
-local f = require 'inc.auto-profiles-functions'
+local lua_modules = mp.find_config_file('lua-modules')
+if lua_modules then
+	package.path = package.path .. ';' .. lua_modules .. '/?.lua'
+end
+
+local f = require 'auto-profiles-functions'
 local utils = require 'mp.utils'
 local msg = require 'mp.msg'
 
